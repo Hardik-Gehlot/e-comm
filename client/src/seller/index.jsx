@@ -1,13 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./style.scss";
-import Login from "./login"
-import Register from "./register"
 import Navbar from "./components/navbar"
+import {getSeller} from "../utils/Storage"
+import {useNavigate} from 'react-router-dom'
 function index() {
-    const [isLogedIn,setIsLogedIn] = useState(true);
+  const navigate = useNavigate();
+    const [user,setUser] = useState({});
+    useEffect(()=>{
+      setUser(getSeller());
+    },[]);
   return (
     <div>
-      {!isLogedIn ? <Register/>:(
+      {!user ? navigate("/seller/login"):(
         <>
           <Navbar/>
         </>
