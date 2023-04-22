@@ -5,6 +5,8 @@ import PNF from "./pages/pageNotFound"
 import Seller from "./seller"
 import Login from "./seller/login"
 import Register from "./seller/register"
+import LoginUser from "./pages/login";
+import RegisterUser from "./pages/register"
 import {BrowserRouter,Route,Routes} from "react-router-dom";
 function App() {
 
@@ -12,6 +14,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/login' element={<LoginUser/>}/>
+        <Route path='/register' element={<RegisterUser/>}/>
 
         {/* seller */}
         <Route path='/seller' element={<Seller/>}/>
