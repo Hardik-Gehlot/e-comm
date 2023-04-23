@@ -1,0 +1,9 @@
+@import "../../mixins.scss";
+.home{
+   .main{
+    background-color: orange;
+    width: 100%;
+    margin-top:$navHeight;
+    min-height: 400px;
+   }
+}
