@@ -7,13 +7,13 @@ function index() {
   const navigate = useNavigate();
   return (
     <header className={`header`}>
-      <div className="logo" onClick={() => navigate("/")}>
+      <div className="slogo" onClick={() => navigate("/")}>
         <img src={logo} alt="E-com" />
       </div>
 
-      <ul className="menuItems">
-        <li className="menuItem">Products</li>
-        <li className="menuItem">Orders</li>
+      <ul className="smenuItems">
+        <li className="smenuItem">Products</li>
+        <li className="smenuItem">Orders</li>
       </ul>
 
       <div className="profile">

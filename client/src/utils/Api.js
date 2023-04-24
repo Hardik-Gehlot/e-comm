@@ -7,6 +7,7 @@ export const fetchDataFromApi = async (url, params, method = 'GET') => {
             method: method,
             headers: {
                 'Content-Type': 'application/json', // set the content type to JSON
+                'Access-Control-Allow-Origin':"*"
             },
             data: JSON.stringify(params)
         });

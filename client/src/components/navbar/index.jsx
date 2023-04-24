@@ -10,7 +10,7 @@ import "./style.scss";
 import logo from "/logo.svg";
 function index() {
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
+  const [isLogin, setIsLogin] = useState(true);
   const navigate = useNavigate();
 
   //handle search query and navigate to another page and also closes search bar

@@ -9,9 +9,9 @@
     justify-content: space-between;
     align-items: center;
     z-index: 2;
-    background-color: red;
+    background-color: rgb(3, 79, 74);
     padding: 0px 4px;
-    .logo {
+    .slogo {
         cursor: pointer;
         img {
           height: 35px;
@@ -20,13 +20,13 @@
         }
       }
 
-      .menuItems {
+      .smenuItems {
         list-style-type: none;
-        display: none;
+        display: flex;
         align-items: center;
         justify-content: center;
         
-        .menuItem {
+        .smenuItem {
           height: 60px;
           display: flex;
           align-items: center;
