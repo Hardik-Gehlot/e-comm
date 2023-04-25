@@ -142,7 +142,7 @@ function index() {
                 id="zip"
                 placeholder="Pin code"
                 type="number"
-              />{" "}
+              />
             </div>
           </div>
           <div class="logindiv">
