@@ -1,2 +1,3 @@
 const { addProduct } = require("./Add");
-module.exports={addProduct};
+const { getProducts } = require("./Fetch");
+module.exports={addProduct,getProducts};

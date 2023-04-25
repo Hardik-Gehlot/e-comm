@@ -1,0 +1,16 @@
+.carousel{
+    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    .img{
+        width: 100%;
+        aspect-ratio: 1;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .name{
+        width: 100%;
+        
+    }
+}

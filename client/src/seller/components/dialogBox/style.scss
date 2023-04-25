@@ -1,0 +1,26 @@
+@import "../../../mixins.scss";
+.main-container{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(73, 73, 73, 0.803);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .dialog{
+        min-height: 30%;
+        width: 90%;
+        background-color: rgb(255, 255, 255);
+        color: black;
+        @include sm{
+            width: 80%;
+        }
+        @include md{
+            width: 60%;
+        }
+        
+    }
+}

@@ -3,11 +3,14 @@ import './style.scss';
 import { fetchDataFromApi } from "../../../utils/Api"
 import {getSeller} from "../../../utils/Storage"
 import { useNavigate } from 'react-router-dom';
+import Dialog from "../../components/dialogBox"
+import {MdDelete} from "react-icons/md"
 
 function Index() {
     const navigate = useNavigate();
     const [specifications, setSpecifications] = useState([]);
     const [images, setImages] = useState([]);
+    const [showDialog,setShowDialog]=useState(false);
     const addSpecification = () => {
         const hasEmptyFields = specifications.some((spec) => spec.type === '' || spec.value === '');
         if (!hasEmptyFields) {
@@ -15,10 +18,7 @@ function Index() {
         }
     };
     const addImages = () => {
-        const hasEmptyFields = images.some((img) => img === '');
-        if (!hasEmptyFields) {
-            setImages([...images, ""])
-        }
+        setShowDialog(true);
     }
     const handleImageChange = (index, value) => {
         const updatedImage = [...images];
@@ -77,9 +77,23 @@ function Index() {
             alert("Fields are empty")
         }
     }
+    const hideDialog=()=>{
+        setShowDialog(false);
+    }
+    const dialogValue=(value)=>{
+        if(value!==""){
+            setImages([...images, value])
+        }
+    }
+    const deleteImage = (index) => {
+        const filteredImages = images.filter((img, i) => i !== index);
+        setImages(filteredImages);
+      };
+      
 
     return (
         <div>
+            {showDialog ? <Dialog hideAction={hideDialog} dialogValue={dialogValue}/> : ""}
             <form onSubmit={handleForm}>
                 <input type="text" name='name' placeholder="Name" />
                 <br />
@@ -100,16 +114,12 @@ function Index() {
                 <div className="imageContainer">
                     {images.map((img, index) => (
                         <div className="image" key={index}>
-                            <input
-                                type="text"
-                                value={img}
-                                placeholder="Image"
-                                onChange={(e) => handleImageChange(index, e.target.value)}
-                            />
+                            <img src={img} alt="image" className="img" />
+                            <div className="deletebtn" onClick={()=>deleteImage(index)}><MdDelete/></div>
                         </div>
                     ))}
                     <button type="button" onClick={addImages}>
-                        Add Image
+                        +
                     </button>
                 </div>
                 <br />

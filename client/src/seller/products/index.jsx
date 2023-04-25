@@ -1,2 +1,3 @@
 import AddProduct from "./addProduct";
-export {AddProduct};
+import ProductDetail from "./productDetail";
+export {AddProduct,ProductDetail};
