@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 @import "../mixins.scss";
 .main{
     margin-top: $navHeight;
@@ -12,4 +13,12 @@
     @include md{
         grid-template-columns: repeat(5,18%);
     }
+=======
+@import"../mixins.scss";
+.main{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    background-color:$bgcolor;
+>>>>>>> Stashed changes
 }

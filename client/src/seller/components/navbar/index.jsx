@@ -18,6 +18,7 @@ function index() {
 
       <div className="profile">
         <FaRegUser></FaRegUser>
+        your name
       </div>
     </header>
   );
