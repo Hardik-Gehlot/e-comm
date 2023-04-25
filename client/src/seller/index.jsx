@@ -22,8 +22,8 @@ function index() {
     fetchData();
   }, [user]);
   return (
-    <div>
-      {!user ? navigate("/seller/login"):(
+    <div className='main'>
+      {/* {!user ? navigate("/seller/login"):(
         <>
           <Navbar/>
           <div className="main">
@@ -32,7 +32,9 @@ function index() {
             })}
           </div>
         </>
-      )}
+      )} */}
+      <Navbar/>
+      
     </div>
   )
 }

@@ -1,0 +1,126 @@
+@import "../../mixins.scss";
+
+.registrationSection {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  .goto {
+    display: flex;
+    position: fixed;
+    right: 0;
+    width: 35%;
+    height: 100vh;
+    background: #000;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    .container {
+      width: 90%;
+      position: absolute;
+      .btndiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 30px;
+
+        .go {
+          width: 50%;
+          height: 40px;
+          background: none;
+          border: 2px solid white;
+
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+  .cardRegistration {
+    display: flex;
+    width: 65%;
+    height: 100%;
+    background: $bgcolor;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    .rigisterForm {
+      display: flex;
+      height: 100%;
+      color: #000;
+      flex-direction: column;
+      gap: 5px;
+      padding: 20px 20px;
+      width: 100%;
+      align-items: center;
+      .formTitle{
+        width: 80%;
+      }
+      .infoGroup{
+        width: 80%;
+            background: rgb(231, 231, 231);
+            display: grid;
+           grid-template-columns: repeat(2,47%);
+           column-gap: 4%;
+           padding: 15px;
+           box-sizing: border-box;
+      }
+      .authGroup{
+        width: 80%;
+        background: rgb(231, 231, 231);
+        display: grid;
+           grid-template-columns: repeat(1,98%);
+           column-gap: 4%;
+       padding: 15px;
+       box-sizing: border-box;
+      }
+      .addressGroup{
+        width: 80%;
+        background: rgb(231, 231, 231);
+        display: grid;
+       grid-template-columns: repeat(2,47%);
+       column-gap: 4%;
+       padding: 15px;
+       box-sizing: border-box;
+      }
+      .inputField {
+        width: 100%;
+        height: $feildHeight;
+        padding: 5px;
+        padding-left: 10px;
+        outline: none;
+        border-radius: 5px 5px 0px 0px;
+        border: none;
+        background-color: rgb(218, 218, 218);
+        // border-bottom: 2px solid black;
+        &:focus{
+           border-bottom: 2px solid black;
+         }
+      }
+
+      .logindiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        margin-top: 3%;
+        .btn {
+          height: $feildHeight;
+          padding: 10px;
+          background-color: #000;
+          color: white;
+          border: none;
+          text-transform: uppercase;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          font-weight: bold;
+          letter-spacing: 3px;
+          width: 50%;
+        }
+      }
+    }
+  }
+}

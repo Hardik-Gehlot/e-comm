@@ -18,14 +18,51 @@ function index() {
     }
   }
   return (
-    <div>
-      <form className='loginForm' onSubmit={handleForm}>
-        <input className='inputField' name='email' placeholder='Email' type='email'/>
-        <input className='inputField' name='password' placeholder='Password' type='text'/>
-        <button className='btn'>Login</button>
-        <div className="goto" onClick={()=>{navigate("/register")}}>register page</div>
+    <div className="sellerLoginSection">
+    <div className="goto">
+      <div className="container">
+        <h1>WELCOME</h1>
+        <div className="desc">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nam
+          nostrum repellendus voluptatibus cum praesentium minima sit placeat
+          adipisci velit!
+        </div>
+
+        <div className="btndiv">
+          <button
+            className="go"
+            onClick={() => {
+              navigate("/register");
+            }}
+          >
+            register
+          </button>
+        </div>
+      </div>
+    </div>
+    <div className="card">
+      <form className="loginForm" onSubmit={handleForm}>
+        <div>
+          <h1>Login</h1>
+        </div>
+        <input
+          className="inputField"
+          name="email"
+          placeholder="Enter Email"
+          type="email"
+        />
+        <input
+          className="inputField"
+          name="password"
+          placeholder="Enter Password"
+          type="password"
+        />
+        <div className="logindiv">
+          <div className="btn">Login</div>
+        </div>
       </form>
     </div>
+  </div>
   )
 }
 

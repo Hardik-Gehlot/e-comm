@@ -1,52 +1,50 @@
 @import "../../../mixins.scss";
 .header {
-    position: fixed;
-    transform: translateY(0);
-    width: 100%;
+  position: fixed;
+  transform: translateY(0);
+  width: 100%;
+  height: $navHeight;
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  background-color: rgb(3, 79, 74);
+  padding: 0px 4px;
+  .slogo {
+    cursor: pointer;
+    img {
+      height: 35px;
+      padding: 2px;
+    }
+  }
+  .smenuItems {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .smenuItem {
     height: $navHeight;
     display: flex;
-    top: 0;
-    justify-content: space-between;
     align-items: center;
-    z-index: 2;
-    background-color: rgb(3, 79, 74);
-    padding: 0px 4px;
-    .slogo {
-        cursor: pointer;
-        img {
-          height: 35px;
-          padding: 2px;
-          
-        }
-      }
-
-      .smenuItems {
-        list-style-type: none;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        
-        .smenuItem {
-          height: 60px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          margin: 0 15px;
-          color: white;
-          font-weight: 500;
-          position: relative;
-          &.searchIcon {
-            margin-right: 0;
-          }
-          svg {
-            font-size: 18px;
-          }
-          cursor: pointer;
-          &:hover {
-            color: var(--pink);
-          }
-        }
-      }
-    
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 15px;
+    color: $gray;
+    font-weight: 500;
+    position: relative;
+    &:hover {
+      color: black;
+      border-bottom: 2px solid black;
+      transition: all 0.2s ease;
     }
+    &.searchIcon {
+      margin-right: 0;
+    }
+    svg {
+      font-size: 18px;
+    }
+    cursor: pointer;
+  }
+}
+}
