@@ -4,6 +4,7 @@
   display: flex;
   width: 100%;
   height: 100%;
+
   .goto {
     display: flex;
     width: 35%;
@@ -12,32 +13,35 @@
     color: white;
     align-items: center;
     justify-content: center;
-    .container{
+
+    .container {
 
       width: 90%;
-       .btndiv{
+
+      .btndiv {
         display: flex;
         align-items: center;
         justify-content: center;
         margin-top: 30px;
 
-        .go{
-        width: 50%;
-        height: 40px;
-        background: none;
-        border: 2px solid white;
+        .go {
+          width: 50%;
+          height: 40px;
+          background: none;
+          border: 2px solid white;
 
-        color: white;
-        text-transform: uppercase;
+          color: white;
+          text-transform: uppercase;
           font-weight: bold;
           letter-spacing: 2px;
 
-         }
-       }
+        }
+      }
 
     }
-   
+
   }
+
   .card {
     display: flex;
     flex-direction: column;
@@ -47,35 +51,37 @@
     justify-content: center;
     align-items: center;
     color: #000;
-    
-    .loginForm{
-        display: flex;
-        color: #000;
-        flex-direction: column;
-       gap: 25px;
-        padding: 20px 20px;
-        
 
-       
-        .inputField{
-            width: 450px;
-            height: $feildHeight;
-            padding: 5px;
-            padding-left: 10px;
-            outline: none;
-            border-radius: 5px 5px 0px 0px;
-            border: none;
-            background-color: rgb(218, 218, 218);
-            border-bottom: 2px solid black;
-           // &:focus{
-            //    border-bottom: 2px solid black;
-          //  }
+    .loginForm {
+      display: flex;
+      color: #000;
+      flex-direction: column;
+      gap: 25px;
+      padding: 20px 20px;
+
+
+
+      .inputField {
+        width: 450px;
+        height: $feildHeight;
+        padding: 5px;
+        padding-left: 10px;
+        outline: none;
+        border-radius: 5px 5px 0px 0px;
+        border: none;
+        background-color: rgb(218, 218, 218);
+        color: rgb(79, 79, 79);
+        &:focus {
+          border-bottom: 2px solid black;
         }
-       .logindiv{
+      }
+
+      .logindiv {
         display: flex;
         align-items: center;
         justify-content: center;
-        .btn{
+
+        .btn {
           height: $feildHeight;
           padding: 10px;
           background-color: #000;
@@ -89,9 +95,9 @@
           font-weight: bold;
           letter-spacing: 3px;
           width: 50%;
-          
+
+        }
       }
-       }
     }
 
   }

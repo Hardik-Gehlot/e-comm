@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { fetchDataFromApi } from '../../../utils/Api';
 import Navbar from "../../components/navbar"
 import "./style.scss";
 function index() {
     const { item } = useLocation().state;
     const [img, setImg] = useState(item?.images[0]);
+    const navigate = useNavigate();
     return (
         <div>
             <Navbar />
@@ -13,7 +14,7 @@ function index() {
                 <div className="headingSection">
                     <div className="name">{item?.name}</div>
                     <div className="actions">
-                        <button className="btn">update</button>
+                        <button className="btn" onClick={()=>navigate('/seller/update_product',{state:{item}})}>update</button>
                         <button className="btn">Delete</button>
                     </div>
                 </div>

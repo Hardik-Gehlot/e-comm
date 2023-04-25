@@ -7,7 +7,7 @@ import Login from "./seller/login"
 import Register from "./seller/register"
 import LoginUser from "./pages/login";
 import RegisterUser from "./pages/register"
-import {AddProduct,ProductDetail} from "./seller/products"
+import {AddProduct,ProductDetail,UpdateProduct} from "./seller/products"
 import {BrowserRouter,Route,Routes} from "react-router-dom";
 function App() {
   
@@ -24,6 +24,7 @@ function App() {
         <Route path='/seller/register' element={<Register/>}/>
         <Route path='/seller/add_product' element={<AddProduct/>}/>
         <Route path='/seller/product' element={<ProductDetail/>}/>
+        <Route path='/seller/update_product' element={<UpdateProduct/>}/>
         <Route path='*' element={<PNF/>}/>
       </Routes>
     </BrowserRouter>

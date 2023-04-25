@@ -8,6 +8,7 @@ import Carousel from "./components/carousel";
 function index() {
   const [user,setUser]=useState({});
   const [products,setProducts]=useState([]);
+  const [active,setActive] = useState(1);
   useEffect(() => {
     setUser(getSeller());
   }, []);
@@ -22,18 +23,19 @@ function index() {
     fetchData();
   }, [user]);
   return (
-    <div className='main'>
-      {/* {!user ? navigate("/seller/login"):(
+    <div className='content-wrapper'>
+      {!user ? navigate("/seller/login"):(
         <>
-          <Navbar/>
-          <div className="main">
+          <Navbar active={active} setActive={setActive}/>
+          {active===1?(
+            <div className="productsContainer">
             {products?.map((item,index)=>{
               return <Carousel key={index} item={item}/>
             })}
           </div>
+          ):("")}
         </>
-      )} */}
-      <Navbar/>
+      )}
       
     </div>
   )

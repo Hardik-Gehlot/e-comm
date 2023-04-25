@@ -1,3 +1,4 @@
 import AddProduct from "./addProduct";
 import ProductDetail from "./productDetail";
-export {AddProduct,ProductDetail};
+import UpdateProduct from "./updateProduct";
+export {AddProduct,ProductDetail,UpdateProduct};

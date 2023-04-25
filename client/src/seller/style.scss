@@ -1,15 +1,18 @@
 @import "../mixins.scss";
-.main{
+.content-wrapper{
+    width: 100%;
     margin-top: $navHeight;
-    display: grid;
-    grid-template-columns: repeat(2,40%);
-    column-gap: 10px;
-    row-gap: 5px;
     padding: 10px;
-    @include sm{
-        grid-template-columns: repeat(3,32%);
-    }
-    @include md{
-        grid-template-columns: repeat(5,18%);
+    .productsContainer{
+        display: grid;
+        grid-template-columns: repeat(2,40%);
+        column-gap: 10px;
+        row-gap: 5px;
+        @include sm{
+            grid-template-columns: repeat(3,32%);
+        }
+        @include md{
+            grid-template-columns: repeat(5,18%);
+        }
     }
 }

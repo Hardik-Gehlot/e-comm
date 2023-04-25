@@ -3,6 +3,7 @@ import "./style.scss"
 import {fetchDataFromApi} from "../../utils/Api"
 import {setUser} from "../../utils/Storage"
 import {useNavigate} from 'react-router-dom'
+import {motion as m} from "framer-motion";
 function index() {
   const navigate = useNavigate();
   async function handleForm(e){
@@ -18,14 +19,13 @@ function index() {
     }
   }
   return (
-    <div className="sellerLoginSection">
+    <m.div initial={{x:"100%"}} animate={{x:"0%"}} transition={{duration:0.75,ease:"easeOut"}} className="sellerLoginSection">
     <div className="goto">
       <div className="container">
-        <h1>WELCOME</h1>
+        <h1>WELCOME BACK</h1>
         <div className="desc">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nam
-          nostrum repellendus voluptatibus cum praesentium minima sit placeat
-          adipisci velit!
+          Thankyou for coming back, A lot of great deals are waiting for you. Login and grab them all.<br/>
+          If you don't have account yet just register here.
         </div>
 
         <div className="btndiv">
@@ -62,7 +62,7 @@ function index() {
         </div>
       </form>
     </div>
-  </div>
+  </m.div>
   )
 }
 

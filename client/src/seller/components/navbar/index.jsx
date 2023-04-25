@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
 import logo from "/logo.svg";
 import { FaRegUser } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-function index() {
+function index(prop) {
   const navigate = useNavigate();
   return (
     <header className={`header`}>
@@ -12,13 +12,15 @@ function index() {
       </div>
 
       <ul className="smenuItems">
-        <li className="smenuItem">Products</li>
-        <li className="smenuItem">Orders</li>
+        <li className={`smenuItem ${prop.active === 1 ? "active" : ""}`} onClick={() => prop.setActive(1)}>Products</li>
+        <li className={`smenuItem ${prop.active === 2 ? "active" : ""}`} onClick={() => prop.setActive(2)}>Orders</li>
       </ul>
 
-      <div className="profile">
-        <FaRegUser></FaRegUser>
-        your name
+      <div className="right">
+        <button onClick={()=>navigate("/seller/add_product")}>Add Product</button>
+        <div className="profile">
+          <FaRegUser className="user"></FaRegUser>
+        </div>
       </div>
     </header>
   );

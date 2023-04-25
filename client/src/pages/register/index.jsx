@@ -3,6 +3,7 @@ import "./style.scss";
 import { fetchDataFromApi } from "../../utils/Api";
 import { setUser } from "../../utils/Storage";
 import { useNavigate } from "react-router-dom";
+import {motion as m} from "framer-motion";
 function index() {
   const navigate = useNavigate();
   async function handleForm(e) {
@@ -40,7 +41,7 @@ function index() {
     }
   }
   return (
-    <div className="registrationSection">
+    <m.div initial={{x:"-100%"}} animate={{x:"0%"}} transition={{duration:0.75,ease:"easeOut"}} className="registrationSection">
       <div class="cardRegistration">
         <form class="rigisterForm" onSubmit={handleForm}>
           <div className="formTitle">
@@ -66,13 +67,12 @@ function index() {
                 name="phone"
                 id="phone"
                 placeholder="Phone Number"
-                type="number"
+                type="text"
               />
             </div>
           </div>
           <div className="authGroup">
             <div className="inputGroup">
-              {" "}
               <label for="email">Email:</label> <br />
               <input
                 class="inputField"
@@ -112,7 +112,7 @@ function index() {
                 id="street"
                 placeholder="Street"
                 type="text"
-              />{" "}
+              />
             </div>
             <div className="inputGroup">
               <label for="city">City:</label> <br />
@@ -122,7 +122,7 @@ function index() {
                 id="city"
                 placeholder="City"
                 type="text"
-              />{" "}
+              />
             </div>
             <div className="inputGroup">
               <label for="state">State:</label> <br />
@@ -132,7 +132,7 @@ function index() {
                 id="state"
                 placeholder="State"
                 type="text"
-              />{" "}
+              />
             </div>
             <div className="inputGroup">
               <label for="zip">Pin code:</label> <br />
@@ -142,7 +142,7 @@ function index() {
                 id="zip"
                 placeholder="Pin code"
                 type="number"
-              />
+              />{" "}
             </div>
           </div>
           <div class="logindiv">
@@ -155,9 +155,8 @@ function index() {
         <div className="container">
           <h1>WELCOME</h1>
           <div className="desc">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nam
-            nostrum repellendus voluptatibus cum praesentium minima sit placeat
-            adipisci velit!
+            You are missing a lot just Register quickly and grab the latest big deals.<br/>
+            If you already have an account then login here.
           </div>
 
           <div className="btndiv">
@@ -172,7 +171,7 @@ function index() {
           </div>
         </div>
       </div>
-    </div>
+    </m.div>
   );
 }
 
